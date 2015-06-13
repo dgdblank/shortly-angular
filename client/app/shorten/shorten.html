@@ -10,7 +10,7 @@
     <input type='url' ng-model='link.url' required>
     <button>submit</button>
   </form>
-  <div class='link'>
+  <div class='link' ng-show="display">
         <img src='../assets/redirect_icon.png'/>
           <div class='info'>
             <div class='visits'><span class='count'>{{display.visits}}</span>Visits</div>
