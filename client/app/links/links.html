@@ -5,7 +5,12 @@
       <li><a href="#/shorten"><strong>New Link</strong></a><li>
     </ul>
   </div>
-  <div>
-    {{ data.links }}
-  </div>
+  <form>
+  <input type='search' ng-model='search' placeholder='Search'>
+  </form>
+    <ul>
+      <li ng-repeat='link in data.links | filter:search'>
+        {{ link.url }}
+      </li>
+    </ul>
 </div>
