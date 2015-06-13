@@ -10,7 +10,15 @@
     <input type='url' ng-model='link.url' required>
     <button>submit</button>
   </form>
-  <div> {{ whatwewant.url }}</div>
+  <div class='link'>
+        <img src='../assets/redirect_icon.png'/>
+          <div class='info'>
+            <div class='visits'><span class='count'>{{display.visits}}</span>Visits</div>
+            <div class='title'>{{display.title}}</div>
+            <div class='original'>{{display.url}}</div>
+            <a href='{{base_url}}/{{code}}'>{{display.base_url}}/{{display.code}}</a>
+          </div>
+      </div>
 </div>
 
 
