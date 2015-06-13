@@ -22,9 +22,20 @@ angular.module('shortly.services', [])
     });
   };
 
+  var navToLink = function() {
+    return $http({
+      method : 'GET',
+      url: '/api/links/:code'
+    })
+    .then(function(resp) {
+      return resp.data;
+    });
+  };
+
   return {
     getLinks: getLinks,
-    addLink: addLink
+    addLink: addLink,
+    navToLink: navToLink
   };
 })
 .factory('Auth', function ($http, $location, $window) {

@@ -23,7 +23,7 @@ module.exports = {
   allLinks: function (req, res, next) {
   var findAll = Q.nbind(Link.find, Link);
 
-  findAll({}})
+  findAll({})
     .then(function (links) {
       res.json(links);
     })
@@ -73,6 +73,7 @@ module.exports = {
 
   navToLink: function (req, res, next) {
     var link = req.navLink;
+    console.log(link);
     link.visits++;
     link.save(function (err, savedLink) {
       if (err) {
