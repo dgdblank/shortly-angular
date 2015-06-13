@@ -7,7 +7,7 @@ angular.module('shortly.links', [])
     Links.getLinks()
       .then(function(links) {
         console.log(links);
-        $scope.data = links;
+        $scope.data.links = links;
       })
       .catch(function(error) {
         console.error(error);
@@ -23,4 +23,6 @@ angular.module('shortly.links', [])
         console.error(error);
       });
   }
+
+  $scope.getLinks();
 });
